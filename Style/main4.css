@@ -22,7 +22,7 @@ header {
     justify-content: center;
     left: 0; top: 0; 
     width:100%;
-    height: 150px;
+    height: 15%;
     z-index: 10; 
     margin: 0 auto;
 }
@@ -45,8 +45,8 @@ footer {
 }
 
 div#logo {
-    width: 200px;
-    height: 100px;
+    width: auto;
+    height: 70%;
     content: url(Assets/logo.png);
     display: flex;
     justify-content: center;
