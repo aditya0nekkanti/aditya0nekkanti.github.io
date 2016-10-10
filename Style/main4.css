@@ -11,6 +11,12 @@ html,body {
     padding: 0;
 }
 
+.siteWrapper {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
 header {
     background: #cee5ee; 
     background-image: url(Assets/snow2.svg);
