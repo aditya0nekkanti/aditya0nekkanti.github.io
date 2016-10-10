@@ -62,11 +62,11 @@ div#logo {
 nav {
     position: absolute;
     flex-direction: row;
-    bottom: 5px;
+    bottom: 5%;
     width: 100%;
     margin: 0 auto;
     padding: 0px;
-    font-size: 16px;
+    font-size: 100%;
 }
 
 nav ul {
@@ -136,7 +136,7 @@ ul li a:hover{
     -webkit-backface-visibility: hidden;*/
     backface-visibility: hidden;
     overflow: auto;
-
+    
 }
 
 .panel h1 {
@@ -145,7 +145,7 @@ ul li a:hover{
     color: #535252;
     position:relative;
     line-height: 50px;
-    top: 175px;
+    top: 19%;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -210,7 +210,7 @@ a[ id= "about" ]:target ~ #main article.panel {
 }
 
 footer div#mountains {
-    width: 500px;
+    width: 30%;
     height: auto;
     content: url(Assets/mountains.png);
     bottom: 0;
