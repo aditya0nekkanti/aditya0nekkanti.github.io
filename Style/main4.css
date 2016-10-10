@@ -18,15 +18,9 @@ header {
     background-image: url(Assets/snow2.svg);
     background-size: cover;
     position: fixed;
-    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;  /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;
-     -webkit-justify-content: center;
-    justify-content: center;
     left: 0; top: 0; 
-    width:100%;
-    height: 18%;
+    width: 100%;
+    height: 12%;
     z-index: 10; 
     margin: 0 auto;
 }
@@ -36,16 +30,6 @@ footer {
     background-image: url(Assets/snow2.svg);
     background-size: cover;
     position: absolute; 
-    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;  /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;
-    -webkit-flex-flow: column;
-    flex-flow: column;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    align-items: center;
     left: 0; bottom: 0; 
     padding: 0;
     width: 100%;
@@ -58,12 +42,7 @@ div#logo {
     width: auto;
     height: 70%;
     content: url(Assets/logo.png);
-    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;  /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
+    margin-bottom: 5%;
 }
 
 
@@ -72,20 +51,13 @@ nav {
     flex-direction: row;
     bottom: 5%;
     width: 100%;
-    margin: 0 auto;
+    margin-top: 5%;
     padding: 0px;
     font-size: 100%;
 }
 
 nav ul {
     list-style: none;
-    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;  /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-    flex-direction: row;
     margin: 0; 
     padding: 0;
     font-family: 'Boogaloo';
@@ -154,7 +126,7 @@ ul li a:hover{
     color: #535252;
     position:relative;
     line-height: 50px;
-    top: 19%;
+    top: 13%;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -169,16 +141,7 @@ h2 {
 div.social {
     width: 100%;
     height: 100%;
-    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;  /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;
-    -webkit-flex-flow: row;
-    flex-flow: row;
-    -webkit-align-content: flex-start;
-    align-content: flex-start;
-    -webkit-justify-content: center;
-    justify-content: center;
+
     z-index: 1000;
 }
 
