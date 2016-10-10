@@ -52,6 +52,7 @@ footer {
     height: 20%;
     z-index: 10; 
     overflow: hidden;
+    padding-top: 10px;
 }
 
 div#logo {
@@ -159,7 +160,7 @@ ul li a:hover{
     padding: 0;
 }
 
-h2 {
+footer h2 {
     font-size: 14px;
     font-family: 'Libre Baskerville';
     color: #9d9a9a;
@@ -218,7 +219,7 @@ a[ id= "about" ]:target ~ #main article.panel {
 }
 
 footer div#mountains {
-    width: 500px;
+    width: 80vh;
     height: auto;
     content: url(Assets/mountains.png);
     bottom: 0;
