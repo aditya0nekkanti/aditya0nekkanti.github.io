@@ -49,6 +49,7 @@ footer {
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    align-content: flex-start;
     left: 0; bottom: 0; 
     padding: 0;
     width:100%;
@@ -60,7 +61,7 @@ footer {
 
 div#logo {
     width: auto;
-    height: 70%;
+    height: 60%;
     content: url(Assets/logo.png);
     margin-bottom: 20px;
     
@@ -85,14 +86,23 @@ nav ul {
     margin: 0; 
     padding: 0;
     font-family: 'Boogaloo';
+    font-size: 100%;
     text-align: center;
 }
 
 
 ul li {
     position: relative;
-    padding: 0px 30px 0px 30px;
+    padding: 0px 15px 0px 15px;
     text-align: center;
+}
+
+ul:first-child {
+    padding-left: 0px;
+}
+
+ul:last-child {
+    padding-right: 0px;
 }
 
 ul li a {
@@ -156,14 +166,17 @@ ul li a:hover{
     padding: 0;
 }
 
+
 footer h2 {
     font-size: 14px;
     font-family: 'Libre Baskerville';
     color: #9d9a9a;
+    z-index: 1000;
+    margin: 0px 0px 10px 0px;
 }
 
 div.social {
-    width: 100%;
+    width: 80vh;
     height: 100%;
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
@@ -215,10 +228,12 @@ a[ id= "about" ]:target ~ #main article.panel {
 }
 
 footer div#mountains {
+    position: absolute;
     width: 80vh;
     height: auto;
     content: url(Assets/mountains.png);
     bottom: 0;
+    z-index: 11;
 }
 
 
