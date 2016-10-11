@@ -62,7 +62,6 @@ div#logo {
     width: auto;
     height: 70%;
     content: url(Assets/logo.png);
-    margin-bottom: 30px;
     
 }
 
@@ -71,7 +70,6 @@ nav {
     position: absolute;
     width: 100%;
     padding: 0px;
-    bottom: 5px;
 }
 
 nav ul {
@@ -224,4 +222,8 @@ h3 {
     margin-top: 800px;
     margin-bottom 100px;
     color: #535252;
+}
+
+@-ms-viewport{
+  width: device-width;
 }
