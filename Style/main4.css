@@ -33,7 +33,7 @@ header {
     justify-content: center;
     left: 0; top: 0; 
     width: 100%;
-    height: 100px;
+    height: 15%;
     z-index: 10; 
     margin: 0 auto;
 }
@@ -53,7 +53,7 @@ footer {
     left: 0; bottom: 0; 
     padding: 0;
     width:100%;
-    height: 150px;
+    height: 20%;
     z-index: 10; 
     overflow: hidden;
     padding-top: 10px;
@@ -160,10 +160,10 @@ ul li a:hover{
     color: #535252;
     position:relative;
     line-height: 50px;
+    top: 16%;
     text-align: center;
     margin: 0;
     padding: 0;
-    top: 110px;
 }
 
 
@@ -230,7 +230,7 @@ a[ id= "about" ]:target ~ #main article.panel {
 
 footer div#mountains {
     position: absolute;
-    width: 500px;
+    width: 80vh;
     height: auto;
     content: url(Assets/mountains.png);
     bottom: 0;
