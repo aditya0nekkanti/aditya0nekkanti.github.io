@@ -92,12 +92,12 @@ nav ul {
 
 ul li {
     position: relative;
-    line-height: 1.5;
     padding: 0px 30px 0px 30px;
     text-align: center;
 }
 
 ul li a {
+    font-size: 1em;
     color: #9d9a9a;
     text-decoration: none;
     text-align: center;
