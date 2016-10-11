@@ -62,6 +62,7 @@ div#logo {
     width: auto;
     height: 70%;
     content: url(Assets/logo.png);
+    margin-bottom: 20px;
     
 }
 
@@ -70,6 +71,7 @@ nav {
     position: absolute;
     width: 100%;
     padding: 0px;
+    bottom: 5px;
 }
 
 nav ul {
@@ -138,6 +140,7 @@ ul li a:hover{
     -webkit-backface-visibility: hidden;*/
     backface-visibility: hidden;
     overflow: auto;
+    margin: 0 auto;
     
 }
 
@@ -218,11 +221,6 @@ footer div#mountains {
     bottom: 0;
 }
 
-h3 {
-    margin-top: 800px;
-    margin-bottom 100px;
-    color: #535252;
-}
 
 @-ms-viewport{
   width: device-width;
