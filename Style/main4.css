@@ -33,7 +33,7 @@ header {
     justify-content: center;
     left: 0; top: 0; 
     width: 100%;
-    height: 15%;
+    height: 18%;
     z-index: 10; 
     margin: 0 auto;
 }
@@ -160,7 +160,7 @@ ul li a:hover{
     color: #535252;
     position:relative;
     line-height: 50px;
-    top: 16%;
+    top: 19%;
     text-align: center;
     margin: 0;
     padding: 0;
