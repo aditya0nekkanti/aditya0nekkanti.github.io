@@ -26,7 +26,7 @@ header {
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
     align-content: flex-end;
     align-items: center;
     justify-content: center;
@@ -63,16 +63,15 @@ div#logo {
     height: 70%;
     content: url(Assets/logo.png);
     margin-bottom: 20px;
+    
 }
 
 
 nav {
     position: absolute;
-    flex-direction: row;
-    bottom: 5%;
     width: 100%;
     padding: 0px;
-    font-size: 100%;
+    bottom: 5px;
 }
 
 nav ul {
@@ -97,7 +96,6 @@ ul li {
 }
 
 ul li a {
-    font-size: 1em;
     color: #9d9a9a;
     text-decoration: none;
     text-align: center;
