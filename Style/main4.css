@@ -9,6 +9,7 @@ html,body {
     font-size: 100%;
     overflow: hidden;
     padding: 0;
+    margin: 0 auto;
 }
 
 .siteWrapper {
@@ -32,7 +33,7 @@ header {
     justify-content: center;
     left: 0; top: 0; 
     width: 100%;
-    height: 12%;
+    height: 100px;
     z-index: 10; 
     margin: 0 auto;
 }
@@ -47,7 +48,6 @@ footer {
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;
     flex-flow: column;
-    justify-content: center;
     align-items: center;
     align-content: flex-start;
     left: 0; bottom: 0; 
@@ -160,10 +160,10 @@ ul li a:hover{
     color: #535252;
     position:relative;
     line-height: 50px;
-    top: 13%;
     text-align: center;
     margin: 0;
     padding: 0;
+    top: 110px;
 }
 
 
@@ -176,8 +176,9 @@ footer h2 {
 }
 
 div.social {
+    
     width: 80vh;
-    height: 100%;
+    height: auto;
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
