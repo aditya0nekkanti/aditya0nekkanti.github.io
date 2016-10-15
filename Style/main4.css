@@ -232,7 +232,7 @@ a[ id= "about" ]:target ~ #main article.panel {
 
 footer div#mountains {
     position: absolute;
-    width: 59vh;
+    width: 60vh;
     height: auto; 
     content: url(Assets/mountains.png);
     bottom: 0;
