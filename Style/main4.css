@@ -60,11 +60,10 @@ footer {
 }
 
 div#logo {
-    top: 0;
-    position: absolute;
     width: auto;
-    height: 80%;
+    height: 120%;
     content: url(Assets/baby.svg);
+    margin-bottom: 20px;
    
     
 }
