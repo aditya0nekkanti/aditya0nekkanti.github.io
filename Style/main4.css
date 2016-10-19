@@ -20,8 +20,8 @@ html,body {
 
 header {
     background: #cee5ee; 
-    background-image: url(Assets/snow2.svg);
-    background-size: cover;
+    background-image: url(Assets/clouds.svg);
+    background-size: contain;
     position: fixed;
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
@@ -40,8 +40,8 @@ header {
 
 footer {
     background: #cee5ee; 
-    background-image: url(Assets/snow2.svg);
-    background-size: cover;
+    background-image: url(Assets/clouds.svg);
+    background-size: contain;
     position: absolute; 
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
@@ -60,9 +60,11 @@ footer {
 }
 
 div#logo {
+    top: 0;
+    position: absolute;
     width: auto;
-    height: 60%;
-    content: url(Assets/logo.png);
+    height: 100%;
+    content: url(Assets/baby.svg);
     margin-bottom: 20px;
     
 }
