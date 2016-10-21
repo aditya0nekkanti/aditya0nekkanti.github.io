@@ -37,7 +37,6 @@ header {
     max-height: 120px;
     z-index: 10; 
     margin: 0 auto;
-    overflow: hidden;
 }
 
 footer {
@@ -64,9 +63,11 @@ footer {
 
 div#logo {
     width: auto;
-    height: 100px;
+    height: 200%;
     content: url(Assets/baby.svg);
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
+   
+    
 }
 
 
@@ -162,7 +163,7 @@ ul li a:hover {
     color: #535252;
     position:relative;
     line-height: 50px;
-    top: 150px;;
+    top: 19%;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -242,3 +243,6 @@ footer div#mountains {
 }
 
 
+@-ms-viewport{
+  width: device-width;
+}
