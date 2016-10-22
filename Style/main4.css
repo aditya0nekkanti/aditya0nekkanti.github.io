@@ -176,6 +176,7 @@ div.video {
     height: 300px;
     width: auto;
     margin: 10px;
+    flex-shrink: 1;
     
     
 }
