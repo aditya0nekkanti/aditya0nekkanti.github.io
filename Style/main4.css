@@ -153,7 +153,7 @@ ul li a:hover {
     -webkit-transition: -webkit-transform 0.6s ease-in-out;
     transition: transform 0.6s ease-in-out;
     -webkit-backface-visibility: hidden;*/
-    overflow: auto;
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     margin: 0 auto;
     padding: 150px 0px 0px 0px;
