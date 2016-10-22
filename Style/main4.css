@@ -188,7 +188,8 @@ div.video {
     content: url(Assets/tuned.png);
 }
 
-footer h2 {
+footer > a {
+    text-decoration: none;
     font-size: 14px;
     font-family: 'Libre Baskerville', serif ;
     font-weight: 400;
@@ -196,6 +197,10 @@ footer h2 {
     color: #9d9a9a;
     z-index: 1000;
     margin: 0px 0px 10px 0px;
+}
+
+footer > a:hover {
+    color: #535252;
 }
 
 div.social {
