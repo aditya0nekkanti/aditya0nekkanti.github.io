@@ -61,7 +61,7 @@ footer {
 div#logo {
     width: auto;
     height: 200%;
-    content: url(Assets/baby.svg);
+    content: url(Assets/baby3.svg);
     margin-bottom: 20px;
    
 }
@@ -71,7 +71,7 @@ nav {
     position: absolute;
     width: 100%;
     padding: 0px;
-    bottom: 10px;
+    bottom: 15px;
 }
 
 nav ul {
@@ -96,14 +96,6 @@ ul li {
     text-align: center;
 }
 
-ul:first-child {
-    padding-left: 0px;
-}
-
-ul:last-child {
-    padding-right: 0px;
-}
-
 ul li a {
     color: #9d9a9a;
     text-decoration: none;
@@ -121,8 +113,8 @@ ul li a:hover:after {
 	pointer-events: none;
 	border-color: rgba(206, 229, 238, 0);
 	border-top-color: #cee5ee;
-	border-width: 25px;
-	margin-left: -25px;
+	border-width: 30px;
+	margin-left: -30px;
 }
 
 ul li a:hover {
@@ -182,11 +174,18 @@ div.video {
 #kiss {
     content: url(Assets/kiss.png);
     
-    
 }
 
 #iphone {
-    content: url(Assets/kiss.png);
+    content: url(Assets/iphone.png);
+}
+
+#more {
+    content: url(Assets/more.png);
+}
+
+#tuned {
+    content: url(Assets/tuned.png);
 }
 
 footer h2 {
