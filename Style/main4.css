@@ -31,8 +31,7 @@ header {
     justify-content: center;
     left: 0; top: 0; 
     width: 100%;
-    height: 19%;
-    max-height: 120px;
+    height: 120px;
     z-index: 10; 
     margin: 0 auto;
 }
@@ -52,8 +51,7 @@ footer {
     left: 0; bottom: 0; 
     padding: 0;
     width:100%;
-    height: 19%;
-    max-height: 120px;
+    height: 120px;
     z-index: 10; 
     padding-top: 10px;
     margin-bottom: 150px;
@@ -176,8 +174,6 @@ div.video {
     height: 300px;
     width: 533.33;
     margin: 10px;
-    flex-shrink: 1;
-    
     
 }
 
