@@ -18,7 +18,7 @@ html,body {
 
 header {
     background: #cee5ee; 
-    background-image: url(Assets/clouds2.svg);
+    background-image: url(Assets/clouds.svg);
     background-size: contain;
     position: fixed;
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -38,7 +38,7 @@ header {
 
 footer {
     background: #cee5ee; 
-    background-image: url(Assets/clouds2.svg);
+    background-image: url(Assets/clouds.svg);
     background-size: contain;
     align-self: flex-end;
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -61,7 +61,7 @@ footer {
 div#logo {
     width: auto;
     height: 200%;
-    content: url(Assets/baby3.svg);
+    content: url(Assets/baby.svg);
     margin-bottom: 20px;
    
 }
