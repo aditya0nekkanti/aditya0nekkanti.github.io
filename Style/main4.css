@@ -7,7 +7,6 @@ html,body {
     height: 100%;
     position: relative; 
     font-size: 100%;
-    overflow: hidden;
     padding: 0;
     margin: 0 auto;
 }
@@ -15,7 +14,6 @@ html,body {
 .siteWrapper {
     height: 100%;
     position: relative;
-    overflow: hidden;
 }
 
 header {
@@ -43,7 +41,7 @@ footer {
     background: #cee5ee; 
     background-image: url(Assets/clouds2.svg);
     background-size: contain;
-    position: absolute; 
+    align-self: flex-end;
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
@@ -58,6 +56,7 @@ footer {
     max-height: 120px;
     z-index: 10; 
     padding-top: 10px;
+    margin-bottom: 120px;
 }
 
 div#logo {
@@ -66,7 +65,6 @@ div#logo {
     content: url(Assets/baby.svg);
     margin-bottom: 20px;
    
-    
 }
 
 
@@ -136,23 +134,29 @@ ul li a:hover {
     height: 100%;
     width: 100%;
     margin: 0 auto;
-    padding: 0;
-    
+    overflow: hidden;
 }
 
 .panel {
+    position: relative;
     width: 100%;
     height: 100%;
     background: #fcfcfc;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    align-items: center;
+    justify-content: center;
+     -webkit-flex-flow: row wrap;
     z-index:0; 
     /*-webkit-transform: translateZ( 0 );
     transform: translateZ( 0 );
     -webkit-transition: -webkit-transform 0.6s ease-in-out;
     transition: transform 0.6s ease-in-out;
     -webkit-backface-visibility: hidden;*/
-    backface-visibility: hidden;
     overflow: auto;
     margin: 0 auto;
+    padding: 150px 0px 0px 0px;
     
 }
 
@@ -162,12 +166,28 @@ ul li a:hover {
     color: #535252;
     position:relative;
     line-height: 50px;
-    top: 19%;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
+div.video {
+    height: 300px;
+    width: auto;
+    margin: 10px;
+    
+    
+}
+
+#kiss {
+    content: url(Assets/kiss.png);
+    
+    
+}
+
+#iphone {
+    content: url(Assets/kiss.png);
+}
 
 footer h2 {
     font-size: 14px;
@@ -218,22 +238,22 @@ a.social {
  *Scrolling
  */
 
-a[ id= "shorts" ]:target ~ #main article.panel {
+a[ id= "shorts" ]:target ~ #main div.panel {
     -webkit-transform: translateY( 0%);
     transform: translateY( 0% );
 }
 
-a[ id= "comics" ]:target ~ #main article.panel {
+a[ id= "comics" ]:target ~ #main div.panel {
     -webkit-transform: translateY( -100% );
     transform: translateY( -100% );
 }
-a[ id= "about" ]:target ~ #main article.panel {
+a[ id= "about" ]:target ~ #main div.panel {
     -webkit-transform: translateY( -200% );
     transform: translateY( -200% );
 }
 
 footer div#mountains {
-    position: absolute;
+    
     width: auto;
     height: 100px; 
     content: url(Assets/hills.svg);
