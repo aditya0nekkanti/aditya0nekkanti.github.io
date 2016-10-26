@@ -112,9 +112,6 @@ ul li a {
     color: #9d9a9a;
     text-decoration: none;
     text-align: center;
-    transition-timing-function: ease-in-out;
-    -webkit-transition: 200ms;
-    -webkit-transition-timing-function: ease-in-out;
 }
 
 ul li a:hover:after {
@@ -191,7 +188,7 @@ div.video {
 }
 
 div.video:hover {
-    opacity: 0.7;
+    opacity: 0.9;
     
 }
 
