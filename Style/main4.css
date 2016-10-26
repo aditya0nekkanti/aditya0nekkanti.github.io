@@ -36,6 +36,10 @@ header {
     margin: 0 auto;
 }
 
+.hidden {
+    top: -120px;
+}
+
 footer {
     background: #cee5ee; 
     background-image: url(Assets/clouds.svg);
@@ -61,7 +65,7 @@ footer {
 div#logo {
     width: auto;
     height: 200%;
-    content: url(Assets/baby.svg);
+    content: url(Assets/baby2.svg);
     margin-bottom: 20px;
    
 }
@@ -72,7 +76,15 @@ nav {
     width: 100%;
     padding: 0px;
     bottom: 15px;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+    -webkit-transition-timing-function: cubic-bezier( 0.215, 0.610, 0.355, 1.000 );
+    transition-timing-function: cubic-bezier( 0.215, 0.610, 0.355, 1.000 );
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
 }
+
+
 
 nav ul {
     list-style: none;
@@ -168,6 +180,15 @@ div.video {
     height: 300px;
     width: 533.33;
     margin: 10px;
+    transition: 200ms;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 100ms;
+    -webkit-transition-timing-function: ease-in-out;
+    
+}
+
+div.video:hover {
+    opacity: 0.7;
     
 }
 
@@ -201,10 +222,10 @@ footer > a {
 
 footer > a:hover {
     color: #535252;
+    
 }
 
 div.social {
-    
     width: 80vh;
     height: auto;
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -224,6 +245,7 @@ a svg:hover #youtube {
   fill: #535252;
 }
 
+footer > a,
 a svg #facebook,
 a svg #instagram,
 a svg #twitter,
