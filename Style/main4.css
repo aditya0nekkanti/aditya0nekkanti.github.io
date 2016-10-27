@@ -253,6 +253,8 @@ footer div#mountains {
     justify-content: center;
     flex-flow: row wrap;
     z-index:0; 
+    -ms-overflow-y: scroll;
+    -ms-overflow-x: hidden;
     overflow-y: scroll;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
