@@ -218,9 +218,9 @@ a.social {
  /*==========  Footer Image  ==========*/
 
 footer div#mountains {
-    height: 100px;
-    width: 201.5px;
-    background: url(Assets/hills.svg);
+    height: 80px;
+    width: 240px;
+    background: url(Assets/hills.png);
     background-size: cover;
     bottom: 0;
     z-index: 11;
@@ -393,6 +393,11 @@ div.playground {
         background: url(Assets/mobileLogo.png);
         background-size: cover;
             
+    }
+    
+    div.baby {
+        width: 320px;
+        height: 240px;
     }
     
 
