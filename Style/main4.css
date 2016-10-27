@@ -50,8 +50,8 @@ header {
 
 div#logo {
     width: auto;
-    height: 200%;
-    content: url(Assets/baby2.svg);
+    height: auto;
+    content: url(Assets/logo.png);
     margin-bottom: 20px;
    
 }
@@ -336,4 +336,5 @@ div.comics {
 @-ms-viewport{
   width: device-width;
 }
+
 
