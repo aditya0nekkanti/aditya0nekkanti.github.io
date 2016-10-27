@@ -330,8 +330,17 @@ div.comics {
         width: 400px;
         height: 400px;
     }
-
+    
+    div#logo {
+        content: url(Assets/mobileLogo.png)
     }
+    
+    header{
+        height: 100px;
+    }
+
+}
+
 
 @-ms-viewport{
   width: device-width;
