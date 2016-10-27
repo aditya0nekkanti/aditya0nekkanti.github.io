@@ -1,6 +1,8 @@
-/*
- *Styling
- */
+/*==================================================
+=                     Stylesheet                   =
+==================================================*/
+
+ /*==========  Main Page Formatting  ==========*/
 
 html,body {
     width: 100%;
@@ -15,6 +17,12 @@ html,body {
     height: 100%;
     position: relative;
 }
+
+/*==================================================
+=                     Header/Nav                   =
+==================================================*/
+
+ /*==========  Header  ==========*/
 
 header {
     background: #cee5ee; 
@@ -40,28 +48,6 @@ header {
     top: -120px;
 }
 
-footer {
-    background: #cee5ee; 
-    background-image: url(Assets/clouds.svg);
-    background-size: contain;
-    align-self: flex-end;
-    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;  /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    align-content: flex-start;
-    left: 0; bottom: 0; 
-    padding: 0;
-    width:100%;
-    height: 120px;
-    z-index: 10; 
-    padding-top: 10px;
-    margin-bottom: 150px;
-    margin-top: 20px;
-}
-
 div#logo {
     width: auto;
     height: 200%;
@@ -70,6 +56,7 @@ div#logo {
    
 }
 
+ /*==========  Nav  ==========*/
 
 nav {
     position: absolute;
@@ -83,8 +70,6 @@ nav {
     -webkit-transition-property: -webkit-transform;
     transition-property: transform;
 }
-
-
 
 nav ul {
     list-style: none;
@@ -101,12 +86,13 @@ nav ul {
     text-align: center;
 }
 
-
 ul li {
     position: relative;
     padding: 0px 15px 0px 15px;
     text-align: center;
 }
+
+ /*==========  Header Link Styling  ==========*/
 
 ul li a {
     color: #9d9a9a;
@@ -134,98 +120,33 @@ ul li a:hover {
     color: #535252;
 }
 
-#main {
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-}
+/*==================================================
+=                     Footer                       =
+==================================================*/
 
-.panel {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: #fcfcfc;
+footer {
+    background: #cee5ee; 
+    background-image: url(Assets/clouds.svg);
+    background-size: contain;
+    align-self: flex-end;
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    flex-flow: column;
     align-items: center;
-    justify-content: center;
-     -webkit-flex-flow: row wrap;
-    z-index:0; 
-    /*-webkit-transform: translateZ( 0 );
-    transform: translateZ( 0 );
-    -webkit-transition: -webkit-transform 0.6s ease-in-out;
-    transition: transform 0.6s ease-in-out;
-    -webkit-backface-visibility: hidden;*/
-    overflow-y: scroll;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-    margin: 0 auto;
-    padding: 150px 0px 0px 0px;
-    
-}
-
-.panel h1 {
-    font-family: sans-serif;
-    font-size: 30px;
-    color: #535252;
-    position:relative;
-    line-height: 50px;
-    text-align: center;
-    margin: 0;
+    align-content: flex-start;
+    left: 0; bottom: 0; 
     padding: 0;
+    width:100%;
+    height: 120px;
+    z-index: 10; 
+    padding-top: 10px;
+    margin-bottom: 150px;
+    margin-top: 20px;
 }
 
-div.video {
-    height: 300px;
-    width: 533.33;
-    margin: 10px;
-    transition: 200ms;
-    transition-timing-function: ease-in-out;
-    -webkit-transition: 100ms;
-    -webkit-transition-timing-function: ease-in-out;
-    
-}
-
-div.video:hover,
-div.comics:hover
-{
-    opacity: 0.9;
-    
-}
-
-#kiss {
-    content: url(Assets/kiss.png);
-    
-}
-
-#iphone {
-    content: url(Assets/iphone.png);
-}
-
-#more {
-    content: url(Assets/more.png);
-}
-
-#tuned {
-    content: url(Assets/tuned.png);
-}
-
-div.comics {
-    height: 600px;
-    width: 600px;
-    margin: 10px;
-    transition: 200ms;
-    transition-timing-function: ease-in-out;
-    -webkit-transition: 100ms;
-    -webkit-transition-timing-function: ease-in-out;
-    
-}
-
-#shmoopy {
-    content: url(Assets/comic1.png);
-}
+ /*==========  Footer Link Styling  ==========*/
 
 footer > a {
     text-decoration: none;
@@ -256,6 +177,8 @@ div.social {
     z-index: 1000;
 }
 
+ /*==========  Social Icons  ==========*/
+
 a svg:hover #facebook,
 a svg:hover #instagram,
 a svg:hover #twitter,
@@ -278,9 +201,51 @@ a.social {
     margin: 0px 5px 0px 5px;
 }
 
-/*
- *Scrolling
- */
+ /*==========  Footer Image  ==========*/
+
+footer div#mountains {
+    
+    width: auto;
+    height: 100px; 
+    content: url(Assets/hills.svg);
+    bottom: 0;
+    z-index: 11;
+}
+
+/*==================================================
+=                    Main Content                  =
+==================================================*/
+
+#main {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+ /*==========  Section Formatting  ==========*/
+
+.panel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fcfcfc;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    align-items: center;
+    justify-content: center;
+     -webkit-flex-flow: row wrap;
+    z-index:0; 
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 auto;
+    padding: 150px 0px 0px 0px;
+    
+}
+
+ /*==========  Navigation Transitioning  ==========*/
 
 a[ id= "shorts" ]:target ~ #main div.panel {
     -webkit-transform: translateY( 0%);
@@ -296,16 +261,79 @@ a[ id= "about" ]:target ~ #main div.panel {
     transform: translateY( -200% );
 }
 
-footer div#mountains {
+ /*==========  Video Formatting  ==========*/
+
+div.video {
+    height: 300px;
+    width: 533.33;
+    margin: 10px;
+    transition: 200ms;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 100ms;
+    -webkit-transition-timing-function: ease-in-out;
     
-    width: auto;
-    height: 100px; 
-    content: url(Assets/hills.svg);
-    bottom: 0;
-    z-index: 11;
 }
 
+div.video:hover,
+div.comics:hover
+{
+    opacity: 0.9;
+    
+}
+
+          /*  Video Thumbnail  */
+
+#kiss {
+    content: url(Assets/kiss.png);
+    
+}
+
+#iphone {
+    content: url(Assets/iphone.png);
+}
+
+#more {
+    content: url(Assets/more.png);
+}
+
+#tuned {
+    content: url(Assets/tuned.png);
+}
+
+ /*==========  Comics Formatting  ==========*/
+
+div.comics {
+    height: 600px;
+    width: 600px;
+    margin: 10px;
+    transition: 200ms;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 100ms;
+    -webkit-transition-timing-function: ease-in-out;
+    
+}
+
+            /* Comic Thumbnails  */
+
+#shmoopy {
+    content: url(Assets/comic1.png);
+}
+
+
+
+/*==================================================
+=                   Mobile Styling                 =
+==================================================*/
+
+@media only screen and (max-device-width : 480px) {
+    div.comics {
+        width: 400px;
+        height: 400px;
+    }
+
+    }
 
 @-ms-viewport{
   width: device-width;
 }
+
