@@ -237,6 +237,7 @@ footer div#mountains {
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     margin: 0 auto;
+    bottom: 0;
     padding: 150px 0px 0px 0px;
     min-height: 1px;
 
@@ -342,24 +343,12 @@ div.baby {
     background-size: cover;
 }
 
-.playground p {
+p {
     font-size: 24px; 
     font-family: 'Boogaloo';
     margin: 0 auto;
-}
-
-div.playground {
-    width: 100%;
-    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;  /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    -ms-align-content: center;
-    align-content: center;
     color: #9d9a9a;
-    
+    text-align: center;
 }
 
 
