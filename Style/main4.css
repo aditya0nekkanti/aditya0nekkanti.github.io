@@ -251,6 +251,8 @@ footer div#mountains {
     align-items: center;
     justify-content: center;
     flex-flow: row wrap;
+    min-height: -webkit-calc(100% - 300px);
+    min-height: -moz-calc(100% - 300px);
     min-height: calc(100% - 300px);
 }
 
