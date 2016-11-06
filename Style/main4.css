@@ -142,7 +142,7 @@ footer {
     padding-top: 10px;
     margin-bottom: 150px;
     margin-top: 20px;
-    min-height: 1px;
+
 }
 
  /*==========  Footer Link Styling  ==========*/
@@ -237,7 +237,6 @@ footer div#mountains {
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     margin: 0 auto;
-    bottom: 0;
     padding: 150px 0px 0px 0px;
     min-height: 100%;
 
@@ -252,6 +251,7 @@ footer div#mountains {
     align-items: center;
     justify-content: center;
     flex-flow: row wrap;
+    flex: 1;
 }
 
  /*==========  Navigation Transitioning  ==========*/
