@@ -238,7 +238,7 @@ footer div#mountains {
     -webkit-overflow-scrolling: touch;
     margin: 0 auto;
     padding: 150px 0px 0px 0px;
-    min-height: 100%;
+    
 
 }
 
@@ -251,7 +251,11 @@ footer div#mountains {
     align-items: center;
     justify-content: center;
     flex-flow: row wrap;
-    flex: 1;
+    min-height: calc(100% - 300px);
+}
+
+.about {
+    flex-flow: column;
 }
 
  /*==========  Navigation Transitioning  ==========*/
