@@ -113,7 +113,7 @@ ul li a:hover:after {
     z-index: 10;
 }
 
-ul li a:hover:after {
+ul li a:hover {
     color: #535252;
 }
 
