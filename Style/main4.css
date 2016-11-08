@@ -97,7 +97,7 @@ ul li a {
     text-align: center;
 }
 
-ul li a:hover:after {
+ul li a .hover {
 	top: 100%;
 	left: 50%;
 	border: solid transparent;
@@ -113,7 +113,7 @@ ul li a:hover:after {
     z-index: 10;
 }
 
-ul li a:hover {
+ul li a .hover {
     color: #535252;
 }
 
@@ -289,12 +289,12 @@ div.video {
     
 }
 
-/*div.video:hover,
-div.comics:hover
+div.video hover,
+div.comics hover
 {
     opacity: 0.9;
     
-}*/
+}
 
           /*  Video Thumbnail  */
 

@@ -30,15 +30,38 @@
         <script src="lity/vendor/jquery.js"></script>
         <script src="lity/dist/lity.js"></script>
         
+        <script>
+            
+            function ready() {
+        
+            $('a').on('touchstart', function(e) {
+	       $('a').addClass('hover');
+	
+            }).on('touchmove', function(e) {
+	       console.log('mousemove: remove highlight');
+	       $('a').removeClass('hover');
+	
+            }).mouseenter( function(e) {
+            	$('a').addClass('hover');
+	
+            }).mouseleave( function(e) {
+            	$('a').removeClass('hover');
+	
+            }).click( function(e) {
+            	$('a').removeClass('hover');
+	
+            });
+            }
+        
+        </script>
+        
     </head>
     
     <body>
       
       <div class="siteWrapper">
        
-        <a id="shorts"></a>
-        <a id="comics"></a>
-        <a id="about"></a> 
+ 
         <header class="header">
             
             <div id="logo"></div>
@@ -47,7 +70,7 @@
                 <ul>
                     <li><a id ="shortsLink" href="#shorts">SHORTS</a> </li>
                     <li><a id ="comicsLink" href="#comics">COMICS</a> </li>
-                    <li><a id  ="aboutLink" href="#about">ABOUT US</a> </li>
+                    <li><a id ="aboutLink" href="#about">ABOUT US</a> </li>
                 </ul>
             </nav>
             
