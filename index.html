@@ -32,14 +32,14 @@
         
         <script>
             
-            function ready() {
+        $(document).ready( function() {
         
             $('a').on('touchstart', function(e) {
-	       $('a').addClass('hover');
+	           $('a').addClass('hover');
 	
             }).on('touchmove', function(e) {
-	       console.log('mousemove: remove highlight');
-	       $('a').removeClass('hover');
+	           console.log('mousemove: remove highlight');
+	           $('a').removeClass('hover');
 	
             }).mouseenter( function(e) {
             	$('a').addClass('hover');
@@ -51,8 +51,8 @@
             	$('a').removeClass('hover');
 	
             });
-            }
-        
+            
+        });
         </script>
         
     </head>
