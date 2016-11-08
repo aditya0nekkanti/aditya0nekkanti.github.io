@@ -30,31 +30,6 @@
         <script src="lity/vendor/jquery.js"></script>
         <script src="lity/dist/lity.js"></script>
         
-        <script>
-            
-        $(document).ready( function() {
-        
-            $('a').on('touchstart', function(e) {
-	           $('a').addClass('hover');
-	
-            }).on('touchmove', function(e) {
-	           console.log('mousemove: remove highlight');
-	           $('a').removeClass('hover');
-	
-            }).mouseenter( function(e) {
-            	$('a').addClass('hover');
-	
-            }).mouseleave( function(e) {
-            	$('a').removeClass('hover');
-	
-            }).click( function(e) {
-            	$('a').removeClass('hover');
-	
-            });
-            
-        });
-        </script>
-        
     </head>
     
     <body>
