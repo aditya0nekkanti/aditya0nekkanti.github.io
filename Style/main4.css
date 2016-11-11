@@ -367,13 +367,13 @@ p {
 @media only screen and (max-device-width : 480px) {
     
     div.video {
-        width: 98%;
-        height: auto;
+        width: 355.55px;
+        height: 200px;
     }
     
     div.comics {
-        width: 300px;
-        height: 300px;
+        width: 400px;
+        height: 400px;
     }
     
     div#logo {
@@ -388,6 +388,19 @@ p {
     }
     
 
+}
+
+@media only screen and (max-device-width : 360px) {
+    
+    div.video {
+        width: 300px;
+        height: 168.75px;
+    }
+    
+    div.comics {
+        width: 300px;
+        height: 300px;
+    }
 }
 
 @media only screen and (max-device-height : 350px) {
