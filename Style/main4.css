@@ -367,13 +367,13 @@ p {
 @media only screen and (max-device-width : 480px) {
     
     div.video {
-        width: 355.55px;
-        height: 200px
+        width: 98%;
+        height: auto;
     }
     
     div.comics {
-        width: 400px;
-        height: 400px;
+        width: 300px;
+        height: 300px;
     }
     
     div#logo {
