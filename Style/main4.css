@@ -238,7 +238,7 @@ footer div#mountains {
     -webkit-overflow-scrolling: touch;
     margin: 0 auto;
     padding: 150px 0px 0px 0px;
-    text-align: center;
+   
     
 
 }
@@ -255,7 +255,6 @@ footer div#mountains {
     min-height: -webkit-calc(100% - 300px);
     min-height: -moz-calc(100% - 300px);
     min-height: calc(100% - 300px);
-    max-width: 1000px;
     
 }
 
