@@ -51,7 +51,7 @@ div#logo {
     width: 600px;
     height: 100px;
     content: '';
-    background: url(Assets/logo.png);
+    background: url(Assets/header.png);
     background-size: cover;
     margin-bottom: 20px;
    
@@ -382,8 +382,8 @@ p {
     }
     
     div#logo {
-        background: url(Assets/mobileLogo.png);
-        background-size: cover;
+        width: 450px;
+        height: 75px;
             
     }
     
