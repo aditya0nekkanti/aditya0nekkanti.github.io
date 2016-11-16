@@ -381,7 +381,11 @@ p {
         height: 400px;
     }
     
- 
+    div#logo {
+        background: url(Assets/mobileHeader.png);
+        background-size: cover;
+            
+    }
     
     div.baby {
         width: 300px;
