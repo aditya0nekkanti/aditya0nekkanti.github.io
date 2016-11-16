@@ -42,9 +42,14 @@
         
             $(function() {
                 FastClick.attach(document.body);
+                $('nav ul li a').on('click', function(){
+                $('li a.current').removeClass('current');
+                $(this).addClass('current');
+                });
             });
         
         </script>
+        
         
     </head>
     
@@ -59,7 +64,7 @@
             
             <nav>
                 <ul>
-                    <li><a id ="shortsLink" href="#shorts">SHORTS</a> </li>
+                    <li><a class="current" id ="shortsLink" href="#shorts">SHORTS</a> </li>
                     <li><a id ="comicsLink" href="#comics">COMICS</a> </li>
                     <li><a id ="aboutLink" href="#about">ABOUT US</a> </li>
                 </ul>
