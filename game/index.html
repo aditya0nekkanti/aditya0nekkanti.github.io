@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <meta name="description" content="Phaser.js game demo" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <title>Baby N' Gun Shooter</title>
+    
+    <script src="phaser.min.js" type="text/javascript"></script>
+    <script src="js/mainGame.js" type="text/javascript"></script>
+    <script src="js/gameMenu.js" type="text/javascript"></script>
+    <script src="js/controls.js" type="text/javascript"></script>
+
+    <style id="jsbin-css">
+        html,body {
+            padding: 0;
+            margin: 0 auto;
+        }
+        
+    canvas { 
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        }
+    </style>
+    
+</head>
+
+<body>
+   
+    <script>
+        
+        var game = new Phaser.Game(1000,615, Phaser.CANVAS, 'game');
+        
+        game.state.add("main", mainGame);
+        game.state.add("controls", controls);
+        game.state.add("menu", gameMenu);
+        
+        game.state.start("menu");
+        
+        /*
+
+        var player;
+        var background;
+        var enemies;
+        var explosions;
+        var cursors;
+        var bullets;
+        var healthText;
+        var fireButton; 
+        var bankEffect;
+        var bulletTimer = 0;
+        var enemyTimer;
+        var gameOver;
+        var score = 0;
+        var scoreText;
+        
+        var ACCELERATION = 600;
+        var DRAG = 400;
+        var MAXSPEED = 400;
+        
+        function preload() {
+            game.load.image('background', 'assets/img/background.png');
+            game.load.image('baby', 'assets/img/player.png');
+            game.load.image('bullet', 'assets/img/bullet.png');
+            game.load.image('enemy', 'assets/img/enemy.png');
+            game.load.spritesheet('explosion', 'assets/img/explode.png', 128, 128);
+            game.load.bitmapFont('statFont', 'assets/fonts/statFont.png', 'assets/fonts/statFont.xml');
+            game.load.bitmapFont('replayFont', 'assets/fonts/reFont.png', 'assets/fonts/reFont.xml');
+        }
+
+        function create() {
+            
+            this.scale.scaleMode = Phaser.ScaleManager.EXACT_FIT;
+            //this.scale.pageAlignHorizontally = true;
+            this.scale.pageAlignVertically = true;
+            this.scale.pageAlignHorizontally = true;
+            
+            //  Scrolling Hills
+            background = game.add.tileSprite(0, 0, 1000, 615, 'background');
+            
+            // Bullets
+            bullets = game.add.group();
+            bullets.enableBody = true;
+            bullets.physicsBodyType = Phaser.Physics.ARCADE;
+            bullets.createMultiple(30, 'bullet');
+            bullets.setAll('anchor.x', 0.5);
+            bullets.setAll('anchor.y', 1);
+            bullets.setAll('outOfBoundsKill', true);
+            bullets.setAll('checkWorldBounds', true);
+
+            //  The Player
+            player = game.add.sprite(200, 300, 'baby');
+            player.health = 100;
+            player.anchor.setTo(0.5, 0.5);
+            player.scale.setTo(1, 1);
+            game.physics.enable(player, Phaser.Physics.ARCADE);
+            player.body.setSize(40, 50, 0, -15);
+            player.body.maxVelocity.setTo(MAXSPEED,MAXSPEED);
+            player.body.drag.setTo(DRAG,DRAG);
+            
+            
+            //  The Enemies
+            enemies = game.add.group();
+            enemies.enableBody = true;
+            enemies.physicsBodyType = Phaser.Physics.ARCADE;
+            enemies.createMultiple(8, 'enemy');
+            enemies.setAll('anchor.x', 0.5);
+            enemies.setAll('anchor.y', 0.5);
+            enemies.setAll('scale.x', 0.8);
+            enemies.setAll('scale.y', 1);
+            enemies.setAll('outOfBoundsKill', true);
+            enemies.setAll('checkWorldBounds', true);  
+            enemies.forEach(function(enemies) {
+                enemies.body.setSize(enemies.width * 0.75, enemies.height * 0.75);
+                enemies.damageAmount = 25;
+            });
+            
+            game.time.events.add(1000, launchEnemy);
+            
+            
+            //  Explosions
+            explosions = game.add.group();
+            explosions.enableBody = true;
+            explosions.physicsBodyType = Phaser.Physics.ARCADE;
+            explosions.createMultiple(30, 'explosion');
+            explosions.setAll('anchor.x', 0.5);
+            explosions.setAll('anchor.y', 0.5);
+            explosions.setAll('scale.x', 1.5);
+            explosions.setAll('scale.y', 1.5);
+            explosions.forEach( function(explosion) {
+                explosion.animations.add('explosion');
+            });
+            
+            //  Keyboard Controls
+            cursors = game.input.keyboard.createCursorKeys();
+            
+            //  Fire Controls
+            fireButton = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR)
+            
+             //  Health Text
+            healthText = game.add.bitmapText(game.world.width - 350, 10, 'statFont', 'Health:' + player.health +'%', 35);
+            healthText.render = function () {
+                healthText.text = 'Health: ' + Math.max(player.health, 0) +'%';
+            };
+            healthText.render();
+            
+            //  Score
+            scoreText = game.add.bitmapText(10, 10, 'statFont', 'Score:', 35);
+            scoreText.render = function () {
+                scoreText.text = 'Score: ' + score;
+            };
+            scoreText.render();
+            
+            //  Game Over Test
+            gameOver = game.add.bitmapText(game.world.centerX, game.world.centerY, 'replayFont', 'GAME OVER!\nPlay Again?', 80);
+            gameOver.x = gameOver.x - gameOver.textWidth / 2;
+            gameOver.y = gameOver.y - gameOver.textHeight / 3;
+            gameOver.visible = false;
+            
+        }
+
+        function update() {
+            
+            background.tilePosition.x -= 2;
+            
+            //  Limit Range of Motion to window
+            if (player.y > (game.height - 50))
+                {
+                    player.y = (game.height - 50);
+                    player.body.acceleration.y = 0;
+                }
+            
+            if (player.y < 50)
+                {
+                    player.y = 50;
+                    player.body.acceleration.y = 0;
+                }
+            
+            //  Fire bullet
+            if (player.alive && (fireButton.isDown || game.input.activePointer.isDown))
+                {
+                    fireBullet();
+                }
+            
+            
+            // Reset player, and check for movement input
+            player.body.acceleration.y = 0;
+            
+            // Add Mouse Control
+            if (game.input.y < (game.height - 20 ) &&
+                game.input.y > 20                  &&
+                game.input.x < (game.width - 20)   &&
+                game.input.x > 20)                  
+                {
+                    var minDist = 200;
+                    var dist = game.input.y - player.y;
+                    player.body.velocity.y = MAXSPEED * game.math.clamp(dist / minDist, -1, 1);;
+                }
+            
+            if (cursors.down.isDown)
+                {
+                    player.body.acceleration.y = ACCELERATION;
+                }
+            
+            else if (cursors.up.isDown)
+                {
+                    player.body.acceleration.y = -ACCELERATION;
+                }
+            
+            bankEffect = player.body.velocity.y / MAXSPEED;
+            player.angle = bankEffect * 5;
+            
+            //  Check for Collsion
+            game.physics.arcade.overlap(player, enemies, babyCollide, null, this);
+            game.physics.arcade.overlap(enemies, bullets, hitEnemy, null, this);
+            
+            //  Game Over Check
+            if (!player.alive && gameOver.visible === false) {
+                
+                gameOver.visible = true;
+                gameOver.alpha = 0;
+                var fadeInGameOver = game.add.tween(gameOver);
+                fadeInGameOver.to({alpha: 1}, 1000, Phaser.Easing.Quintic.Out);
+                fadeInGameOver.onComplete.add(setResetHandlers);
+                fadeInGameOver.start();
+                
+                function setResetHandlers() {
+                    
+                    //  The "click to restart" handler
+                    tapRestart = game.input.onTap.addOnce(_restart,this);
+                    spaceRestart = fireButton.onDown.addOnce(_restart,this);
+                    
+                    function _restart() {
+                        tapRestart.detach();
+                        spaceRestart.detach();
+                        restart();
+                    }
+                }
+            }
+
+        }
+
+        function render() {
+            
+
+        }
+        
+        function launchEnemy() {
+                var MIN_ENEMY_SPACING = 300;
+                var MAX_ENEMY_SPACING = 600;
+                var ENEMY_SPEED = -300;
+
+                var enemy = enemies.getFirstExists(false);
+                if (enemy) {
+                    enemy.reset(game.width + 20 ,game.rnd.integerInRange(0,game.height));
+                    enemy.body.velocity.y = game.rnd.integerInRange(-300, 300);
+                    enemy.body.velocity.x = ENEMY_SPEED;
+                    enemy.body.drag.y = 100;
+                }
+                
+                enemy.update = function(){
+                    enemy.angle = 270 - game.math.radToDeg(Math.atan2(enemy.body.velocity.x, enemy.body.velocity.y));
+                    if ((enemy.y < 0) || (enemy.x < 0)) {
+                        enemy.kill();
+                    }
+                }
+                
+                //  Enemy Timing
+                enemyTimer = game.time.events.add(game.rnd.integerInRange(MIN_ENEMY_SPACING, MAX_ENEMY_SPACING), launchEnemy);
+            }
+        
+        function fireBullet() {
+                
+                if (game.time.now > bulletTimer) 
+                    { 
+                        var BULLET_SPEED = 400;
+                        var BULLET_SPACING = 600;
+                        var bullet = bullets.getFirstExists(false); 
+                        
+                        if (bullet)
+                            {
+                                var bulletOffset = Math.sin(game.math.degToRad(player.angle));
+                                bullet.reset(player.x + 30, player.y + bulletOffset - 20);
+                                bullet.angle = player.angle;
+                                game.physics.arcade.velocityFromAngle(bullet.angle, BULLET_SPEED, bullet.body.velocity);
+                                bullet.body.velocity.y += player.body.velocity.y;
+                                
+                                bulletTimer = game.time.now + BULLET_SPACING;
+                            
+                            }
+                    }
+            }
+        
+        function babyCollide(player, enemy) {
+                var explosion = explosions.getFirstExists(false);
+                explosion.reset(enemy.body.x + enemy.body.halfWidth, enemy.body.y + enemy.body.halfHeight);
+                explosion.body.velocity.x = enemy.body.velocity.x;
+                explosion.alpha = 0.7;
+                explosion.play('explosion', 30, false, true);
+                enemy.kill();
+                player.damage(enemy.damageAmount);
+                healthText.render();
+        }
+        
+        function hitEnemy(enemy, bullet) {
+                var explosion = explosions.getFirstExists(false);
+                explosion.reset(bullet.body.x + bullet.body.halfWidth, bullet.body.y + bullet.body.halfHeight);
+                explosion.body.velocity.y = enemy.body.velocity.y;
+                explosion.alpha = 0.7;
+                explosion.play('explosion', 30, false, true);
+                enemy.kill();
+                bullet.kill()
+                
+                score += enemy.damageAmount * 4;
+                scoreText.render()
+        }
+        
+        function restart() {
+            
+                //  Reset the enemies
+                enemies.callAll('kill');
+                game.time.events.remove(enemyTimer);
+                game.time.events.add(1000, launchEnemy);
+
+                //  Revive the player
+                player.revive();
+                player.health = 100;
+                healthText.render();
+                score = 0;
+                scoreText.render();
+
+                //  Hide the text
+                gameOver.visible = false;
+
+        }*/
+        
+        
+        
+            
+    
+    </script>
+    
+</body>
+</html>
