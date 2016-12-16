@@ -10,6 +10,7 @@ html,body {
     font-size: 100%;
     padding: 0;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 .siteWrapper {
@@ -405,17 +406,7 @@ p {
     }
 }
 
-@media only screen and (max-device-height : 350px) {
-    header {
-        height: 80px;
-    
-    }
-    
-    div#logo {
-        height: 50px;
-        width: 300px;
-    }
-}
+
 
 @-ms-viewport{
   width: device-width;
